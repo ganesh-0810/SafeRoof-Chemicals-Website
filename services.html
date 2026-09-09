@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Safe Roof Chemicals - Structural repair, waterproofing, leakage treatment, crack sealing, protective coatings, heat insulation, machinery grouting and building maintenance services.">
+
+    <title>Services | Safe Roof Chemicals</title>
+
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8f8;
+            color: #092f38;
+            line-height: 1.6;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        .container {
+            width: min(1200px, calc(100% - 60px));
+            margin: auto;
+        }
+
+
+
+        /* =========================================================
+           TOP BAR
+        ========================================================= */
+
+        .topbar {
+            background: #092f38;
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+
+        .topbar-inner {
+            min-height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .top-separator {
+            margin: 0 10px;
+            opacity: 0.5;
+        }
+
+
+        .top-contact {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .top-contact a {
+            color: #fff;
+            transition: color 0.25s ease;
+        }
+
+
+        .top-contact a:hover {
+            color: #58d4e2;
+        }
+
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.96);
+
+            border-bottom: 1px solid #e5eded;
+
+            backdrop-filter: blur(14px);
+        }
+
+
+        .nav {
+            min-height: 88px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        /* BRAND */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            flex-shrink: 0;
+        }
+
+
+        .brand-logo img {
+            width: 98px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+
+        .brand-text strong {
+            font-size: 16px;
+            letter-spacing: 1.5px;
+            color: #092f38;
+        }
+
+
+        .brand-text span {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #60777d;
+            margin-top: 4px;
+        }
+
+
+        .brand-text small {
+            margin-top: 8px;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            color: #8a9ca0;
+        }
+
+
+
+        /* DESKTOP NAV */
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .desktop-nav > a,
+        .nav-dropdown-btn {
+            border: none;
+            background: none;
+
+            color: #173d45;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            padding: 32px 0;
+
+            position: relative;
+        }
+
+
+        .desktop-nav > a::after,
+        .nav-dropdown-btn::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: 22px;
+
+            width: 0;
+            height: 2px;
+
+            background: #19b6ca;
+
+            transition: width 0.3s ease;
+        }
+
+
+        .desktop-nav > a:hover::after,
+        .desktop-nav > a.active::after,
+        .nav-dropdown:hover .nav-dropdown-btn::after {
+            width: 100%;
+        }
+
+
+        .desktop-nav > a:hover,
+        .nav-dropdown-btn:hover {
+            color: #159bb0;
+        }
+
+
+        /* DROPDOWN */
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+
+        .nav-dropdown-btn {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+
+        .nav-dropdown-btn span {
+            font-size: 15px;
+        }
+
+
+        .dropdown-menu {
+            position: absolute;
+
+            top: calc(100% - 10px);
+            left: 50%;
+
+            transform:
+                translateX(-50%)
+                translateY(10px);
+
+            width: 250px;
+
+            background: #fff;
+
+            border: 1px solid #e3ebed;
+
+            border-radius: 12px;
+
+            padding: 10px;
+
+            box-shadow:
+                0 20px 50px rgba(7,42,50,0.14);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease,
+                visibility 0.25s ease;
+        }
+
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+
+            transform:
+                translateX(-50%)
+                translateY(0);
+        }
+
+
+        .dropdown-menu a {
+            display: block;
+
+            padding: 10px 13px;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            color: #294950;
+        }
+
+
+        .dropdown-menu a:hover {
+            background: #eef9fa;
+            color: #159bb0;
+        }
+
+
+
+        /* REQUEST BUTTON */
+
+        .nav-request {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            background: #092f38;
+            color: #fff;
+
+            padding: 13px 20px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+
+        .nav-request:hover {
+            background: #159bb0;
+            transform: translateY(-2px);
+        }
+
+
+        .nav-request span {
+            font-size: 15px;
+        }
+
+
+
+        /* MOBILE BUTTON */
+
+        .mobile-menu-btn {
+            display: none;
+
+            border: none;
+            background: none;
+
+            font-size: 25px;
+
+            color: #092f38;
+
+            cursor: pointer;
+        }
+        /* =========================================================
+           PAGE HERO
+        ========================================================= */
+
+        .page-hero {
+            position: relative;
+
+            padding: 105px 0 95px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #082d36,
+                    #07566a
+                );
+
+            color: #fff;
+
+            overflow: hidden;
+        }
+
+
+        .page-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            right: -160px;
+            top: -240px;
+        }
+
+
+        .page-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            right: 70px;
+            bottom: -210px;
+        }
+
+
+        .breadcrumb {
+            position: relative;
+            z-index: 2;
+
+            font-size: 12px;
+
+            color: rgba(255,255,255,0.62);
+
+            margin-bottom: 25px;
+        }
+
+
+        .page-kicker {
+            position: relative;
+            z-index: 2;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            color: #6ce1ec;
+
+            margin-bottom: 18px;
+        }
+
+
+        .page-kicker::before {
+            content: "";
+
+            width: 28px;
+            height: 2px;
+
+            background: #6ce1ec;
+        }
+
+
+        .page-hero h1 {
+            position: relative;
+            z-index: 2;
+
+            font-size: clamp(48px, 7vw, 82px);
+
+            line-height: 0.95;
+
+            letter-spacing: -3px;
+
+            max-width: 900px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .page-hero h1 em {
+            font-style: normal;
+            color: #5bd4e1;
+        }
+
+
+        .page-hero p {
+            position: relative;
+            z-index: 2;
+
+            max-width: 680px;
+
+            font-size: 17px;
+            line-height: 1.8;
+
+            color: rgba(255,255,255,0.76);
+        }
+
+
+
+        /* =========================================================
+           SERVICES SECTION
+        ========================================================= */
+
+        .services-showcase {
+            position: relative;
+
+            padding: 115px 0 140px;
+
+            background: #f5f8f8;
+
+            overflow: hidden;
+        }
+
+
+        .services-showcase::before {
+            content: "";
+
+            position: absolute;
+
+            width: 550px;
+            height: 550px;
+
+            border-radius: 50%;
+
+            background: rgba(25,182,202,0.055);
+
+            top: -230px;
+            right: -170px;
+
+            pointer-events: none;
+        }
+
+
+
+        /* INTRO */
+
+        .services-intro {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.2fr)
+                minmax(300px, 0.8fr);
+
+            gap: 80px;
+
+            align-items: end;
+
+            margin-bottom: 65px;
+        }
+
+
+        .services-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            color: #159bb0;
+
+            margin-bottom: 20px;
+        }
+
+
+        .services-kicker::before {
+            content: "";
+
+            width: 30px;
+            height: 2px;
+
+            background: #159bb0;
+        }
+
+
+        .services-intro h2 {
+            margin: 0;
+
+            font-size: clamp(42px, 5vw, 70px);
+
+            line-height: 0.98;
+
+            letter-spacing: -2.5px;
+
+            color: #092f38;
+        }
+
+
+        .services-intro h2 em {
+            font-style: normal;
+            color: #159bb0;
+        }
+
+
+        .services-intro p {
+            max-width: 470px;
+
+            margin: 0;
+
+            color: #667d83;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* =========================================================
+           SERVICE GRID
+        ========================================================= */
+
+        .services-masonry {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+
+            align-items: start;
+        }
+
+
+
+        /* =========================================================
+           SERVICE IMAGE CARD
+        ========================================================= */
+
+        .service-image-card {
+            position: relative;
+
+            display: block;
+
+            min-height: 480px;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: #092f38;
+
+            isolation: isolate;
+
+            box-shadow:
+                0 10px 30px rgba(6,39,46,0.08);
+
+            transition:
+                transform 0.45s cubic-bezier(.2,.7,.2,1),
+                box-shadow 0.45s ease;
+        }
+
+
+        .service-image-card:nth-child(2),
+        .service-image-card:nth-child(5),
+        .service-image-card:nth-child(8),
+        .service-image-card:nth-child(11) {
+            margin-top: 65px;
+        }
+
+
+        .service-image-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 25px 60px rgba(6,39,46,0.18);
+        }
+
+
+        /* IMAGE */
+
+        .service-image-card img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            z-index: -3;
+
+            transition:
+                transform 0.8s cubic-bezier(.2,.7,.2,1),
+                filter 0.6s ease;
+        }
+
+
+        .service-image-card:hover img {
+            transform: scale(1.08);
+
+            filter: saturate(1.12);
+        }
+
+
+
+        /* OVERLAY */
+
+        .service-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: -2;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(3,29,35,0.05) 10%,
+                    rgba(3,29,35,0.18) 30%,
+                    rgba(3,29,35,0.90) 72%,
+                    rgba(3,29,35,0.98) 100%
+                );
+
+            transition:
+                background 0.5s ease;
+        }
+
+
+        .service-image-card:hover .service-overlay {
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(3,29,35,0.05),
+                    rgba(3,29,35,0.32) 25%,
+                    rgba(3,29,35,0.96) 75%,
+                    rgba(3,29,35,1)
+                );
+        }
+
+
+
+        /* NUMBER */
+
+        .service-number {
+            position: absolute;
+
+            top: 24px;
+            right: 24px;
+
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid rgba(255,255,255,0.4);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(8px);
+
+            color: #fff;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        .service-image-card:hover .service-number {
+            background: #19b6ca;
+
+            border-color: #19b6ca;
+
+            transform: rotate(8deg);
+        }
+
+
+
+        /* CARD CONTENT */
+
+        .service-card-content {
+            position: absolute;
+
+            left: 32px;
+            right: 32px;
+            bottom: 30px;
+
+            color: #fff;
+        }
+
+
+        .service-label {
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: #6cdee8;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+        }
+
+
+        .service-card-content h3 {
+            margin: 0 0 14px;
+
+            font-size: 29px;
+
+            line-height: 1.08;
+
+            letter-spacing: -0.6px;
+
+            color: #fff;
+        }
+
+
+        .service-card-content p {
+            margin: 0 0 22px;
+
+            max-width: 390px;
+
+            color:
+                rgba(255,255,255,0.76);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* EXPLORE */
+
+        .service-explore {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+
+            transition: gap 0.3s ease;
+        }
+
+
+        .service-explore strong {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            color: #092f38;
+
+            font-size: 15px;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        .service-image-card:hover .service-explore {
+            gap: 19px;
+        }
+
+
+        .service-image-card:hover
+        .service-explore strong {
+            transform: rotate(45deg);
+
+            background: #19b6ca;
+
+            color: #fff;
+        }
+
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .service-cta {
+            background: #092f38;
+
+            color: #fff;
+
+            padding: 90px 0;
+        }
+
+
+        .service-cta-inner {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 50px;
+        }
+
+
+        .service-cta-kicker {
+            display: block;
+
+            color: #63dce7;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 16px;
+        }
+
+
+        .service-cta h2 {
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+        }
+
+
+        .service-cta h2 em {
+            font-style: normal;
+            color: #5bd4e1;
+        }
+
+
+        .service-cta p {
+            max-width: 460px;
+
+            color: rgba(255,255,255,0.7);
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            background: #fff;
+
+            color: #092f38;
+
+            padding: 15px 23px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .cta-button:hover {
+            background: #19b6ca;
+
+            color: #fff;
+
+            transform: translateY(-3px);
+        }
+
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            background: #061f27;
+
+            color: #fff;
+
+            padding: 75px 0 0;
+        }
+
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.6fr
+                0.7fr
+                0.9fr
+                1fr;
+
+            gap: 60px;
+
+            padding-bottom: 60px;
+        }
+
+
+        .footer-brand .brand {
+            margin-bottom: 22px;
+        }
+
+
+        .footer-brand .brand-text strong,
+        .footer-brand .brand-text span {
+            color: #fff;
+        }
+
+
+        .footer-brand .brand-text small {
+            color: #8fa9af;
+        }
+
+
+        .footer-brand p {
+            max-width: 430px;
+
+            color: #8da5aa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        .footer-column {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+
+        .footer-column h3 {
+            font-size: 15px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-column a,
+        .footer-column span {
+            color: #8da5aa;
+
+            font-size: 13px;
+
+            transition: color 0.25s ease;
+        }
+
+
+        .footer-column a:hover {
+            color: #5bd4e1;
+        }
+
+
+        .footer-bottom {
+            min-height: 65px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            color: #668087;
+
+            font-size: 11px;
+        }
+
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 1050px) {
+
+            .desktop-nav {
+                gap: 18px;
+            }
+
+
+            .nav-request {
+                display: none;
+            }
+
+
+            .services-intro {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+
+            .services-masonry {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .service-image-card {
+                min-height: 450px;
+            }
+
+
+            .service-image-card:nth-child(2),
+            .service-image-card:nth-child(5),
+            .service-image-card:nth-child(8),
+            .service-image-card:nth-child(11) {
+                margin-top: 0;
+            }
+
+
+            .footer-grid {
+                grid-template-columns:
+                    1.5fr
+                    1fr
+                    1fr;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 750px) {
+
+            .container {
+                width: min(
+                    100% - 35px,
+                    600px
+                );
+            }
+
+
+            .topbar-inner {
+                min-height: 55px;
+
+                font-size: 10px;
+            }
+
+
+            .top-contact {
+                gap: 5px;
+            }
+
+
+            .top-contact span {
+                display: none;
+            }
+
+
+            .top-contact a {
+                display: block;
+            }
+
+
+            .desktop-nav {
+                display: none;
+            }
+
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+
+            .nav {
+                min-height: 78px;
+            }
+
+
+            .brand-logo img {
+                width: 75px;
+                height: 52px;
+            }
+
+
+            .brand-text strong {
+                font-size: 13px;
+            }
+
+
+            .brand-text span {
+                font-size: 11px;
+            }
+
+
+            .brand-text small {
+                font-size: 7px;
+            }
+
+
+            .page-hero {
+                padding: 75px 0 70px;
+            }
+
+
+            .page-hero h1 {
+                font-size: 52px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .page-hero p {
+                font-size: 15px;
+            }
+
+
+            .services-showcase {
+                padding: 75px 0 90px;
+            }
+
+
+            .services-intro {
+                margin-bottom: 40px;
+            }
+
+
+            .services-intro h2 {
+                font-size: 43px;
+
+                letter-spacing: -1.5px;
+            }
+
+
+            .services-intro p {
+                font-size: 15px;
+            }
+
+
+            .services-masonry {
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+
+            .service-image-card {
+                min-height: 440px;
+            }
+
+
+            .service-card-content {
+                left: 25px;
+                right: 25px;
+                bottom: 25px;
+            }
+
+
+            .service-card-content h3 {
+                font-size: 27px;
+            }
+
+
+            .service-number {
+                top: 20px;
+                right: 20px;
+            }
+
+
+            .service-cta {
+                padding: 70px 0;
+            }
+
+
+            .service-cta-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 30px;
+            }
+
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 40px;
+            }
+
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+
+                justify-content: center;
+
+                gap: 5px;
+
+                padding: 20px 0;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 450px) {
+
+            .topbar-inner {
+                flex-direction: column;
+
+                justify-content: center;
+
+                gap: 3px;
+            }
+
+
+            .page-hero h1 {
+                font-size: 44px;
+            }
+
+
+            .services-intro h2 {
+                font-size: 38px;
+            }
+
+
+            .service-image-card {
+                min-height: 420px;
+            }
+
+
+            .service-card-content h3 {
+                font-size: 25px;
+            }
+
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+        }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     UNIVERSAL TOP BAR
+========================================================= -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <div>
+            Perfect Building Care
+        </div>
+
+        <div class="top-contact">
+
+            <a href="tel:+919444408430">
+                +91 94444 08430
+            </a>
+
+            <span>•</span>
+
+            <a href="tel:+919566034725">
+                +91 95660 34725
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     UNIVERSAL HEADER / NAVBAR
+========================================================= -->
+
+<!-- =========================================================
+     UNIVERSAL NAVBAR
+========================================================= -->
+<header class="site-header">
+
+    <div class="container nav">
+
+        <!-- LOGO / BRAND -->
+
+        <a href="/index.html" class="brand">
+
+            <div class="brand-logo">
+                <img
+                    src="/assets/Logo-min.png"
+                    alt="Safe Roof Chemicals Logo"
+                >
+            </div>
+
+            <div class="brand-text">
+
+                <strong>SAFE ROOF</strong>
+
+                <span>CHEMICALS Pvt.Ltd</span>
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="links">
+
+            <a href="/index.html">
+                Home
+            </a>
+
+            <a href="/company.html">
+                Company
+            </a>
+
+            <a href="/services.html">
+                Services
+            </a>
+
+
+            <!-- PRODUCTS DROPDOWN -->
+
+            <div class="drop">
+
+                <button type="button">
+                    Products
+                    <span>⌄</span>
+                </button>
+
+
+                <div class="dropmenu">
+
+                    <a href="/products.html">
+                        All Products
+                    </a>
+
+                    <a href="/water-proofing-compounds/index.html">
+                        Waterproofing
+                    </a>
+
+                    <a href="/adhesives-for-tile-marble-granite/index.html">
+                        Tile / Marble Adhesives
+                    </a>
+
+                    <a href="/membrane/index.html">
+                        Membrane
+                    </a>
+
+                    <a href="/joint-fillers-and-sealants/index.html">
+                        Joint Fillers &amp; Sealants
+                    </a>
+
+                    <a href="/coating-protection-products/index.html">
+                        Coating &amp; Protection
+                    </a>
+
+                    <a href="/machinery-grouting-products/index.html">
+                        Machinery Grouting
+                    </a>
+
+                    <a href="/anti-corrosive-coatings/index.html">
+                        Anti-Corrosive
+                    </a>
+
+                    <a href="/admixture/index.html">
+                        Admixture
+                    </a>
+
+                    <a href="/RAP/index.html">
+                        Retardant, Actulators &amp; Plasticizer
+                    </a>
+
+                    <a href="/Epoxy/index.html">
+                        Epoxy Coating
+                    </a>
+
+                    <a href="/Polymer Putty/index.html">
+                        Polymer Putty
+                    </a>
+
+                    <a href="/Foundation Protection/index.html">
+                        Foundation Protection
+                    </a>
+
+                    <a href="/Heat Insulation/index.html">
+                        Heat Insulation
+                    </a>
+
+                    <a href="/Repair/index.html">
+                        Repair &amp; Retrofitting
+                    </a>
+
+                    <a href="/Floor Hardene/index.html">
+                        Floor Hardener
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            
+
+            <a href="/contact.html">
+                Contact
+            </a>
+
+            <a href="/index.html#request" class="nav-request">
+    Get a Solution
+    <span>↗</span>
+</a>
+
+        <button class="menu">
+            ☰
+        </button>
+
+        </nav>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu"
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="/index.html">
+            Home
+        </a>
+
+        <a href="/company.html">
+            Company
+        </a>
+
+        <a href="/services.html">
+            Services
+        </a>
+
+        <a href="/products.html">
+            Products
+        </a>
+
+        <a href="/customers.html">
+            Customers
+        </a>
+
+        <a href="/contact.html">
+            Contact
+        </a>
+
+        <a
+            href="/index.html#request"
+            class="mobile-request"
+        >
+            Tell Us Your Requirement →
+        </a>
+
+    </div>
+
+</header>
+
+
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+            Home / Services
+        </div>
+
+
+        <div class="page-kicker">
+            OUR EXPERTISE
+        </div>
+
+
+        <h1>
+            Building problems.
+            <br>
+            <em>Engineered solutions.</em>
+        </h1>
+
+
+        <p>
+
+            From structural repairs and waterproofing to protective
+            coatings, grouting and renovation, Safe Roof Chemicals
+            provides practical building-care solutions designed for
+            long-term performance.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES SHOWCASE
+========================================================= -->
+
+<section class="services-showcase">
+
+    <div class="container">
+
+
+        <!-- INTRO -->
+
+        <div class="services-intro">
+
+            <div>
+
+                <span class="services-kicker">
+                    WHAT WE DO
+                </span>
+
+
+                <h2>
+
+                    One partner.
+                    <br>
+
+                    <em>Multiple solutions.</em>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                We identify the building problem and
+                recommend the appropriate and affordable solution.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- SERVICE GRID -->
+
+        <div class="services-masonry">
+
+
+
+            <!-- =================================================
+                 01 STRUCTURAL REPAIR
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/retrofitting.jpg"
+                     alt="Structural Repair and Retrofitting">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    01
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        STRUCTURAL SOLUTIONS
+                    </span>
+
+
+                    <h3>
+                        Structural Repair
+                        <br>
+                        & Retrofitting
+                    </h3>
+
+
+                    <p>
+
+                        Repairing damaged beams, columns and structural
+                        elements to restore strength and durability.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 02 LEAKAGE
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/leakage.jpg"
+                     alt="Leakage Treatment">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    02
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        WATER PROTECTION
+                    </span>
+
+
+                    <h3>
+                        Leakage
+                        <br>
+                        Treatment
+                    </h3>
+
+
+                    <p>
+
+                        Arresting leakages on roofs, joints and vulnerable
+                        building areas with suitable waterproofing
+                        solutions.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 03 CRACK
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/crack.jpg"
+                     alt="Crack Sealing">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number"> 
+                    03
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        REPAIR
+                    </span>
+
+
+                    <h3>
+                        Crack
+                        <br>
+                        Sealing
+                    </h3>
+
+
+                    <p>
+
+                        Sealing building cracks using suitable sealants
+                        and specialized repair techniques.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 04 DAMPNESS
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/dampness.jpg"
+                     alt="Dampness Treatment">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    04
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        BUILDING CARE
+                    </span>
+
+
+                    <h3>
+                        Dampness
+                        <br>
+                        Treatment
+                    </h3>
+
+
+                    <p>
+
+                        Addressing wall and roof dampness through targeted
+                        protective and waterproofing measures.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 05 WATERPROOFING
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/waterproofing.jpg"
+                     alt="Waterproofing">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    05
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        WATERPROOFING
+                    </span>
+
+
+                    <h3>
+                        Waterproofing
+                    </h3>
+
+
+                    <p>
+
+                        Waterproofing solutions for basements, tanks,
+                        terraces, roofs and other critical areas.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 06 HEAT INSULATION
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/heat.jpg"
+                     alt="Heat Insulation">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    06
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        PROTECTION
+                    </span>
+
+
+                    <h3>
+                        Heat
+                        <br>
+                        Insulation
+                    </h3>
+
+
+                    <p>
+
+                        Heat-insulated roof coatings designed to improve
+                        building comfort and surface protection.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 07 PROTECTIVE COATINGS
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/protective-Coating.jpg"
+                     alt="Protective Coatings">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    07
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        SURFACE PROTECTION
+                    </span>
+
+
+                    <h3>
+                        Protective
+                        <br>
+                        Coatings
+                    </h3>
+
+
+                    <p>
+
+                        Protective wall and surface coatings against algae,
+                        fungus and environmental deterioration.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 08 MACHINERY GROUTING
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/Machine-Grouting.jpg"
+                     alt="Machinery Grouting">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    08
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        INDUSTRIAL
+                    </span>
+
+
+                    <h3>
+                        Machinery
+                        <br>
+                        Grouting
+                    </h3>
+
+
+                    <p>
+
+                        High-performance grouting solutions for heavy
+                        machinery foundations and industrial applications.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 09 CONCRETE REPAIR
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/concrete repair.jpg"
+                     alt="Concrete Repair">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    09
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        CONCRETE CARE
+                    </span>
+
+
+                    <h3>
+                        Concrete
+                        <br>
+                        Repair
+                    </h3>
+
+
+                    <p>
+
+                        Specialized repair solutions for deteriorated
+                        concrete surfaces and structural defects.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 10 INDUSTRIAL FLOORING
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/Industrial-Flooring.jpg"
+                     alt="Industrial Flooring">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    10
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        FLOORING
+                    </span>
+
+
+                    <h3>
+                        Industrial
+                        <br>
+                        Flooring
+                    </h3>
+
+
+                    <p>
+
+                        Durable flooring systems for industrial,
+                        commercial and high-use environments.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 11 RENOVATION
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/Home-Renovation.jpg"
+                     alt="Renovation and Maintenance">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    11
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        RENOVATION
+                    </span>
+
+
+                    <h3>
+                        Renovation
+                        <br>
+                        & Maintenance
+                    </h3>
+
+
+                    <p>
+
+                        Building renovation, repair and maintenance
+                        solutions focused on long-term performance.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 12 CONSULTATION
+            ================================================== -->
+
+            <a href="index.html#request"
+               class="service-image-card">
+
+                <img src="assets/building construction.jpg"
+                     alt="Building Consultation">
+
+                <div class="service-overlay"></div>
+
+
+                <div class="service-number">
+                    12
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-label">
+                        EXPERT SUPPORT
+                    </span>
+
+
+                    <h3>
+                        Building
+                        <br>
+                        Consultation
+                    </h3>
+
+
+                    <p>
+
+                        Practical technical guidance to identify building
+                        problems and select appropriate solutions.
+
+                    </p>
+
+
+                    <span class="service-explore">
+
+                        Explore Service
+
+                        <strong>↗</strong>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="service-cta">
+
+    <div class="container service-cta-inner">
+
+        <div>
+
+            <span class="service-cta-kicker">
+                HAVE A BUILDING PROBLEM?
+            </span>
+
+
+            <h2>
+                Tell us what's
+                <br>
+                <em>going wrong.</em>
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p>
+
+                From leakage and dampness to structural defects,
+                waterproofing and industrial requirements, tell us
+                what you're facing and we'll help identify the
+                right solution.
+
+            </p>
+
+
+            <a href="index.html#request"
+               class="cta-button">
+
+                Start a Request
+
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <div class="footer-brand-name">
+                SAFE ROOF
+                <span>CHEMICALS</span>
+            </div>
+
+            <p class="footer-description">
+                Built for stronger structures. Designed for
+                long-lasting protection.
+            </p>
+
+            <p class="footer-location">
+                Perfect Building Care • Chennai, Tamil Nadu
+            </p>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>COMPANY</h3>
+
+            <a href="company.html">
+                About
+            </a>
+
+            <a href="customers.html">
+                Customers
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- SOLUTIONS -->
+        <div class="footer-column">
+
+            <h3>SOLUTIONS</h3>
+
+            <a href="services.html">
+                Waterproofing
+            </a>
+
+            <a href="services.html">
+                Structural Repair
+            </a>
+
+            <a href="services.html">
+                Protective Coatings
+            </a>
+
+            <a href="services.html">
+                Flooring & Grouting
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-column">
+
+            <h3>GET IN TOUCH</h3>
+
+            <a href="tel:+919444408430">
+                +91 94444 08430
+            </a>
+
+            <a href="tel:+919566034725">
+                +91 95660 34725
+            </a>
+
+            <a href="mailto:info@saferoofchemicals.com">
+                info@saferoofchemicals.com
+            </a>
+
+            <span>
+                Chennai, Tamil Nadu
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER LOWER AREA -->
+
+    <div class="container footer-lower">
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-copy">
+
+            <span>
+                © 2026 Safe Roof Chemicals Pvt. Ltd.
+            </span>
+
+            <span>
+                All Rights Reserved.
+            </span>
+
+        </div>
+
+
+        <!-- DEVELOPER -->
+
+        <a
+            href="https://www.linkedin.com/in/ganesh-b-p-baa058367/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="developer-card"
+        >
+
+            <img
+                src="assets/dev1.png"
+                alt="Designed and Developed by Ganesh"
+            >
+
+            
+
+        </a>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
