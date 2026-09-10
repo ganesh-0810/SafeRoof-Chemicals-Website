@@ -3838,7 +3838,7 @@ footer .footer-grid a:hover {
             border-color 0.35s ease;
     }
 
-    .mobile-nav.active {
+    .mobile-nav.show {
         max-height: 500px;
         border-top-color: #e4e9e8;
     }
@@ -5952,7 +5952,7 @@ footer {
         box-shadow: 0 20px 40px rgba(12, 34, 47, 0.14);
     }
 
-    .mobile-nav.active {
+    .mobile-nav.show {
         display: block;
     }
 
@@ -7277,8 +7277,8 @@ footer {
         box-shadow: 0 15px 30px rgba(10, 40, 50, .10);
     }
 
-    .mobile-nav.active {
-        display: flex;
+    .mobile-nav.show {
+        display: flex !important;
     }
 
     .mobile-nav a {
@@ -8913,4 +8913,45 @@ footer p {
         bottom: 25px;
     }
 
+}
+
+/* =========================================================
+   FINAL MOBILE NAVBAR FIX
+   PC/DESKTOP IS NOT AFFECTED
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        border: 1px solid #dce5e4;
+        border-radius: 10px;
+
+        background: #ffffff;
+        color: #102d34;
+
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.show {
+        display: flex !important;
+        flex-direction: column;
+    }
 }
