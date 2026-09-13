@@ -6982,7 +6982,7 @@ footer {
 }
 
 .brand-logo {
-    width: 178px;
+    width: 108px;
     height: 48px;
     display: flex;
     align-items: center;
@@ -8953,5 +8953,101 @@ footer p {
     .mobile-nav.show {
         display: flex !important;
         flex-direction: column;
+    }
+}
+/* =====================================================
+   MOBILE NAVBAR - BIGGER LOGO & COMPANY NAME
+   Desktop/Laptop remains unchanged
+   ===================================================== */
+
+@media (max-width: 750px) {
+
+    /* Navbar height */
+    .site-header .nav {
+        min-height: 88px;
+    }
+
+    /* Logo area */
+    .site-header .brand-logo {
+        width: 88px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .site-header .brand-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Company name */
+    .site-header .brand-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.05;
+    }
+
+    .site-header .brand-name {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        white-space: nowrap;
+    }
+
+    .site-header .brand-sub {
+        font-size: 8px;
+        letter-spacing: 1.2px;
+        margin-top: 3px;
+        white-space: nowrap;
+    }
+
+    /* Keep logo + name nicely aligned */
+    .site-header .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Hamburger alignment */
+    .site-header .menu {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+}
+/* =====================================================
+   FINAL MOBILE NAVBAR TEXT SIZE
+   PHONE ONLY — DESKTOP/LAPTOP UNCHANGED
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    /* SAFE ROOF */
+    .site-header .brand-text strong {
+        font-size: 17px !important;
+        font-weight: 800;
+    }
+
+    /* CHEMICALS Pvt. Ltd. */
+    .site-header .brand-text span {
+        font-size: 10px !important;
+        letter-spacing: 1.5px;
+    }
+
+    /* If there is a third small line */
+    .site-header .brand-text small {
+        font-size: 8px !important;
+    }
+
+    /* Mobile menu items */
+    .site-header .mobile-nav a {
+        font-size: 15px !important;
     }
 }
