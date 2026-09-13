@@ -13,6 +13,8 @@
 
     <title>Services | Safe Roof Chemicals</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
 
     <style>
 
@@ -108,276 +110,8 @@
             color: #58d4e2;
         }
 
+       
 
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(255,255,255,0.96);
-
-            border-bottom: 1px solid #e5eded;
-
-            backdrop-filter: blur(14px);
-        }
-
-
-        .nav {
-            min-height: 88px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-
-        /* BRAND */
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-
-            flex-shrink: 0;
-        }
-
-
-        .brand-logo img {
-            width: 98px;
-            height: 62px;
-            object-fit: contain;
-        }
-
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-        }
-
-
-        .brand-text strong {
-            font-size: 16px;
-            letter-spacing: 1.5px;
-            color: #092f38;
-        }
-
-
-        .brand-text span {
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: #60777d;
-            margin-top: 4px;
-        }
-
-
-        .brand-text small {
-            margin-top: 8px;
-            font-size: 9px;
-            letter-spacing: 1.5px;
-            color: #8a9ca0;
-        }
-
-
-
-        /* DESKTOP NAV */
-
-        .desktop-nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-
-        .desktop-nav > a,
-        .nav-dropdown-btn {
-            border: none;
-            background: none;
-
-            color: #173d45;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            cursor: pointer;
-
-            padding: 32px 0;
-
-            position: relative;
-        }
-
-
-        .desktop-nav > a::after,
-        .nav-dropdown-btn::after {
-            content: "";
-
-            position: absolute;
-            left: 0;
-            bottom: 22px;
-
-            width: 0;
-            height: 2px;
-
-            background: #19b6ca;
-
-            transition: width 0.3s ease;
-        }
-
-
-        .desktop-nav > a:hover::after,
-        .desktop-nav > a.active::after,
-        .nav-dropdown:hover .nav-dropdown-btn::after {
-            width: 100%;
-        }
-
-
-        .desktop-nav > a:hover,
-        .nav-dropdown-btn:hover {
-            color: #159bb0;
-        }
-
-
-        /* DROPDOWN */
-
-        .nav-dropdown {
-            position: relative;
-        }
-
-
-        .nav-dropdown-btn {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-
-        .nav-dropdown-btn span {
-            font-size: 15px;
-        }
-
-
-        .dropdown-menu {
-            position: absolute;
-
-            top: calc(100% - 10px);
-            left: 50%;
-
-            transform:
-                translateX(-50%)
-                translateY(10px);
-
-            width: 250px;
-
-            background: #fff;
-
-            border: 1px solid #e3ebed;
-
-            border-radius: 12px;
-
-            padding: 10px;
-
-            box-shadow:
-                0 20px 50px rgba(7,42,50,0.14);
-
-            opacity: 0;
-            visibility: hidden;
-
-            transition:
-                opacity 0.25s ease,
-                transform 0.25s ease,
-                visibility 0.25s ease;
-        }
-
-
-        .nav-dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-
-            transform:
-                translateX(-50%)
-                translateY(0);
-        }
-
-
-        .dropdown-menu a {
-            display: block;
-
-            padding: 10px 13px;
-
-            border-radius: 7px;
-
-            font-size: 12px;
-            font-weight: 600;
-
-            color: #294950;
-        }
-
-
-        .dropdown-menu a:hover {
-            background: #eef9fa;
-            color: #159bb0;
-        }
-
-
-
-        /* REQUEST BUTTON */
-
-        .nav-request {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-
-            background: #092f38;
-            color: #fff;
-
-            padding: 13px 20px;
-
-            border-radius: 30px;
-
-            font-size: 12px;
-            font-weight: 800;
-
-            white-space: nowrap;
-
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease;
-        }
-
-
-        .nav-request:hover {
-            background: #159bb0;
-            transform: translateY(-2px);
-        }
-
-
-        .nav-request span {
-            font-size: 15px;
-        }
-
-
-
-        /* MOBILE BUTTON */
-
-        .mobile-menu-btn {
-            display: none;
-
-            border: none;
-            background: none;
-
-            font-size: 25px;
-
-            color: #092f38;
-
-            cursor: pointer;
-        }
         /* =========================================================
            PAGE HERO
         ========================================================= */
@@ -1464,6 +1198,7 @@
 
                 <span>CHEMICALS Pvt.Ltd</span>
 
+
             </div>
 
         </a>
@@ -1578,9 +1313,6 @@
     <span>↗</span>
 </a>
 
-        <button class="menu">
-            ☰
-        </button>
 
         </nav>
 
@@ -1619,9 +1351,6 @@
             Products
         </a>
 
-        <a href="/customers.html">
-            Customers
-        </a>
 
         <a href="/contact.html">
             Contact
@@ -2474,10 +2203,7 @@
                 About
             </a>
 
-            <a href="customers.html">
-                Customers
-            </a>
-
+            
             <a href="contact.html">
                 Contact
             </a>
@@ -2575,7 +2301,50 @@
     </div>
 
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const menuButton = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (!menuButton || !mobileNav) {
+        return;
+    }
+
+    menuButton.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const isOpen = mobileNav.classList.toggle("show");
+
+        menuButton.textContent = isOpen ? "✕" : "☰";
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu"
+        );
+    });
+
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileNav.classList.remove("show");
+
+            menuButton.textContent = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        });
+
+    });
+
+});
+</script>
 </body>
 
 </html>

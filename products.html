@@ -13,8 +13,7 @@
     <title>Products | Safe Roof Chemicals</title>
 
     <link
-        rel="stylesheet"
-        href="style.css"
+        rel="stylesheet" href="style.css"
     >
     <link rel="icon" type="image/png" href="../assets/favicon.png">
 
@@ -59,10 +58,6 @@
      UNIVERSAL HEADER / NAVBAR
 ========================================================= -->
 
-<!-- =========================================================
-     UNIVERSAL NAVBAR
-========================================================= -->
-
 <header class="site-header">
 
     <div class="container nav">
@@ -83,6 +78,7 @@
                 <strong>SAFE ROOF</strong>
 
                 <span>CHEMICALS Pvt.Ltd</span>
+
 
             </div>
 
@@ -239,9 +235,6 @@
             Products
         </a>
 
-        <a href="/customers.html">
-            Customers
-        </a>
 
         <a href="/contact.html">
             Contact
@@ -600,9 +593,6 @@
                 About
             </a>
 
-            <a href="customers.html">
-                Customers
-            </a>
 
             <a href="contact.html">
                 Contact
@@ -709,7 +699,50 @@
 ========================================================= -->
 
 <script src="assets/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const menuButton = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (!menuButton || !mobileNav) {
+        return;
+    }
+
+    menuButton.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const isOpen = mobileNav.classList.toggle("show");
+
+        menuButton.textContent = isOpen ? "✕" : "☰";
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu"
+        );
+    });
+
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileNav.classList.remove("show");
+
+            menuButton.textContent = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        });
+
+    });
+
+});
+</script>
 
 </body>
 

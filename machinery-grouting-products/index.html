@@ -233,10 +233,6 @@
                 Products
             </a>
 
-            <a href="/customers.html">
-                Customers
-            </a>
-
             <a href="/contact.html">
                 Contact
             </a>
@@ -465,10 +461,6 @@
                 </a>
 
 
-                <a href="/customers.html">
-                    Customers
-                </a>
-
 
                 <a href="/contact.html">
                     Contact
@@ -596,6 +588,50 @@
     <!-- JAVASCRIPT -->
 
     <script src="../assets/main.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuButton = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (!menuButton || !mobileNav) {
+        return;
+    }
+
+    menuButton.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const isOpen = mobileNav.classList.toggle("show");
+
+        menuButton.textContent = isOpen ? "✕" : "☰";
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu"
+        );
+    });
+
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileNav.classList.remove("show");
+
+            menuButton.textContent = "☰";
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        });
+
+    });
+
+});
+</script>
 
 
 </body>
